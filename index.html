@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NAARI | By Women, For Women</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="logo-area">
+
+            <img
+                src="naari-logo.png.jpeg"
+                alt="NAARI Logo"
+                class="logo"
+            >
+
+        </div>
+
+
+        <nav class="navbar">
+
+            <a href="#home">Home</a>
+
+            <a href="#shop">Shop</a>
+
+            <a href="#story">Our Story</a>
+
+            <a href="#about">About</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+
+        <button
+            class="cart-button"
+            onclick="openCart()"
+        >
+            Cart
+
+            <span id="cart-count">
+                0
+            </span>
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section
+        id="home"
+        class="hero"
+    >
+
+        <div class="hero-content">
+
+            <p class="hero-small-text">
+                Handmade with Love
+            </p>
+
+
+            <h1>
+                By Women,<br>
+                For Women
+            </h1>
+
+
+            <p>
+                Beautiful handmade jewellery and accessories,
+                created with love, creativity and care.
+            </p>
+
+
+            <a
+                href="#shop"
+                class="hero-button"
+            >
+                Shop Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         STORY
+    ========================== -->
+
+    <section
+        id="story"
+        class="story section"
+    >
+
+        <div class="section-heading">
+
+            <p>
+                Our Story
+            </p>
+
+
+            <h2>
+                Made by Hands, Made with Heart
+            </h2>
+
+        </div>
+
+
+        <div class="story-content">
+
+            <div class="story-text">
+
+                <p>
+                    NAARI is a handmade brand created to celebrate
+                    creativity, confidence and the beautiful work
+                    of women.
+                </p>
+
+
+                <p>
+                    Every piece is carefully handmade with attention
+                    to detail, making every creation special and unique.
+                </p>
+
+
+                <p>
+                    Our goal is simple — to create beautiful products
+                    while supporting women's creativity and skills.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FEATURES
+    ========================== -->
+
+    <section class="features section">
+
+        <div class="section-heading">
+
+            <p>
+                Why NAARI?
+            </p>
+
+
+            <h2>
+                Made With Love
+            </h2>
+
+        </div>
+
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    Handmade
+                </div>
+
+
+                <h3>
+                    Handmade
+                </h3>
+
+
+                <p>
+                    Every product is carefully handmade.
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    Unique
+                </div>
+
+
+                <h3>
+                    Unique
+                </h3>
+
+
+                <p>
+                    Every creation has its own special charm.
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    Women
+                </div>
+
+
+                <h3>
+                    By Women
+                </h3>
+
+
+                <p>
+                    Supporting creativity and skills of women.
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    Gifts
+                </div>
+
+
+                <h3>
+                    Perfect Gifts
+                </h3>
+
+
+                <p>
+                    Beautiful choices for yourself and loved ones.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SHOP
+    ========================== -->
+
+    <section
+        id="shop"
+        class="shop section"
+    >
+
+        <div class="section-heading">
+
+            <p>
+                Our Collection
+            </p>
+
+
+            <h2>
+                Shop Handmade
+            </h2>
+
+
+            <p class="section-subtitle">
+                Find something beautiful made especially for you.
+            </p>
+
+        </div>
+
+
+
+        <!-- SEARCH -->
+
+        <div class="shop-search">
+
+            <input
+                type="search"
+                id="product-search"
+                placeholder="Search products..."
+            >
+
+        </div>
+
+
+
+        <!-- CATEGORY BUTTONS -->
+
+        <div class="category-buttons">
+
+            <button
+                class="category-btn active"
+                onclick="filterProducts('All')"
+            >
+                All
+            </button>
+
+
+            <button
+                class="category-btn"
+                onclick="filterProducts('Earrings')"
+            >
+                Earrings
+            </button>
+
+
+            <button
+                class="category-btn"
+                onclick="filterProducts('Bracelets')"
+            >
+                Bracelets
+            </button>
+
+
+            <button
+                class="category-btn"
+                onclick="filterProducts('Bangles')"
+            >
+                Bangles
+            </button>
+
+
+            <button
+                class="category-btn"
+                onclick="filterProducts('Navratri')"
+            >
+                Navratri
+            </button>
+
+
+            <button
+                class="category-btn"
+                onclick="filterProducts('Hair Accessories')"
+            >
+                Hair Accessories
+            </button>
+
+        </div>
+
+
+
+        <!-- PRODUCT GRID -->
+
+        <div
+            id="product-grid"
+            class="product-grid"
+        >
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section
+        id="about"
+        class="about section"
+    >
+
+        <div class="section-heading">
+
+            <p>
+                About NAARI
+            </p>
+
+
+            <h2>
+                More Than Just Accessories
+            </h2>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p>
+                NAARI is a celebration of handmade creativity.
+                We believe that every woman has the power to create,
+                inspire and shine.
+            </p>
+
+
+            <p>
+                From jewellery to beautiful accessories, every product
+                is made with patience, creativity and love.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section
+        id="contact"
+        class="contact section"
+    >
+
+        <div class="section-heading">
+
+            <p>
+                Get In Touch
+            </p>
+
+
+            <h2>
+                We'd Love To Hear From You
+            </h2>
+
+        </div>
+
+
+        <div class="contact-content">
+
+            <p>
+                Have a question about a product or your order?
+            </p>
+
+
+            <button
+                class="contact-whatsapp-btn"
+                onclick="contactOnWhatsApp()"
+            >
+                Chat on WhatsApp
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+
+            <img
+                src="naari-logo.png.jpeg"
+                alt="NAARI Logo"
+            >
+
+        </div>
+
+
+        <p>
+            By Women, For Women
+        </p>
+
+
+        <p class="copyright">
+            © 2026 NAARI. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         PRODUCT DETAILS MODAL
+    ========================== -->
+
+    <div
+        id="product-modal"
+        class="product-modal"
+        onclick="closeProductDetails(event)"
+    >
+
+        <div
+            class="product-modal-box"
+            onclick="event.stopPropagation()"
+        >
+
+            <button
+                class="product-modal-close"
+                onclick="closeProductDetails()"
+            >
+                X
+            </button>
+
+
+            <div class="product-modal-image">
+
+                <img
+                    id="modal-product-image"
+                    src=""
+                    alt="Product"
+                >
+
+            </div>
+
+
+            <div class="product-modal-info">
+
+                <p
+                    id="modal-product-category"
+                    class="product-category"
+                >
+                </p>
+
+
+                <h2 id="modal-product-name">
+                </h2>
+
+
+                <p
+                    id="modal-product-price"
+                    class="product-price"
+                >
+                </p>
+
+
+                <p
+                    id="modal-product-description"
+                    class="product-description"
+                >
+                </p>
+
+
+                <button
+                    id="modal-add-cart"
+                    class="add-cart-btn"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         CART
+    ========================== -->
+
+    <div
+        id="cart-overlay"
+        class="cart-overlay"
+        onclick="closeCart(event)"
+    >
+
+        <div
+            id="cart-panel"
+            class="cart-panel"
+            onclick="event.stopPropagation()"
+        >
+
+
+            <!-- CART HEADER -->
+
+            <div class="cart-header">
+
+                <h2>
+                    Your Cart
+                </h2>
+
+
+                <button
+                    class="cart-close"
+                    onclick="closeCart()"
+                >
+                    X
+                </button>
+
+            </div>
+
+
+
+            <!-- CART ITEMS -->
+
+            <div
+                id="cart-items"
+                class="cart-items"
+            >
+            </div>
+
+
+
+            <!-- CART SUMMARY -->
+
+            <div
+                id="cart-summary"
+                class="cart-summary"
+            >
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+
+                    <span id="cart-subtotal">
+                        ₹0
+                    </span>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Shipping
+                    </span>
+
+
+                    <span id="cart-shipping">
+                        ₹0
+                    </span>
+
+                </div>
+
+
+                <div class="summary-row total-row">
+
+                    <span>
+                        Total
+                    </span>
+
+
+                    <span id="cart-total">
+                        ₹0
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 PAYMENT INFORMATION
+            ========================== -->
+
+            <div
+                id="payment-information"
+                class="payment-information"
+            >
+
+                <h3>
+                    Payment Information
+                </h3>
+
+
+                <p>
+                    After placing your order on WhatsApp,
+                    payment can be made using the UPI ID below.
+                </p>
+
+
+                <div class="upi-box">
+
+                    <span>
+                        UPI ID
+                    </span>
+
+
+                    <strong id="upi-display">
+                        YOUR_UPI_ID
+                    </strong>
+
+                </div>
+
+
+                <p class="payment-note">
+                    Please pay the exact order amount and
+                    send the payment confirmation on WhatsApp.
+                </p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 CUSTOMER DETAILS
+            ========================== -->
+
+            <div
+                id="customer-details"
+                class="customer-details"
+            >
+
+                <h3>
+                    Customer Details
+                </h3>
+
+
+                <p class="customer-details-subtitle">
+                    Order WhatsApp par bhejne ke liye
+                    apni details fill karein.
+                </p>
+
+
+                <input
+                    type="text"
+                    id="customer-name"
+                    placeholder="Your Name"
+                    autocomplete="name"
+                >
+
+
+                <input
+                    type="tel"
+                    id="customer-phone"
+                    placeholder="Mobile Number"
+                    maxlength="10"
+                    inputmode="numeric"
+                    autocomplete="tel"
+                >
+
+
+                <textarea
+                    id="customer-address"
+                    placeholder="Full Delivery Address"
+                    rows="4"
+                    autocomplete="street-address"
+                ></textarea>
+
+
+                <input
+                    type="text"
+                    id="customer-pincode"
+                    placeholder="Pincode"
+                    maxlength="6"
+                    inputmode="numeric"
+                    autocomplete="postal-code"
+                >
+
+
+                <button
+                    class="whatsapp-order-btn"
+                    onclick="sendWhatsAppOrder()"
+                >
+                    Order on WhatsApp
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NOTIFICATION -->
+
+    <div
+        id="notification"
+        class="notification"
+    >
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
